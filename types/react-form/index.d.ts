@@ -1,6 +1,7 @@
 // Type definitions for react-form 3.2
 // Project: https://github.com/tannerlinsley/react-form#readme
 // Definitions by: Cameron McAteer <https://github.com/cameron-mcateer>
+//                 Codetraptor <https://github.com/codetraptor>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.6
 

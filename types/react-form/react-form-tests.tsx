@@ -492,11 +492,11 @@ const doesUsernameExist = (username: string, ms: number) =>
         setTimeout(() => {
             // Simulate username check
             if (['joe', 'tanner', 'billy', 'bob'].includes(username)) {
-                return resolve('That username is taken');
+                resolve('That username is taken');
             }
-            // Simulate request faulure
+            // Simulate request failure
             if (username === 'reject') {
-                return reject('Failure while making call to validate username does not exist');
+                reject('Failure while making call to validate username does not exist');
             }
             // Sumulate username success check
             resolve();
