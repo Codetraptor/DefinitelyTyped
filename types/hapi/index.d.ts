@@ -457,7 +457,7 @@ export interface Request extends Podium {
      * The response object when set. The object can be modified but must not be assigned another object. To replace the response with another from within an extension point, use reply(response) to
      * override with a different response. Contains null when no response has been set (e.g. when a request terminates prematurely when the client disconnects).
      */
-    response: ResponseObject | Boom.Boom | null;
+    response: ResponseObject | Boom | null;
 
     /**
      * Same as pre but represented as the response object created by the pre method.
@@ -1381,6 +1381,7 @@ export interface ValidationObject {
 export type RouteOptionsResponseSchema =
     boolean
     | ValidationObject
+    | AnySchema
     | ((value: object | Buffer | string, options: ValidationOptions) => Promise<any>);
 
 /**
@@ -3872,7 +3873,7 @@ export namespace Lifecycle {
     type ReturnValueTypes =
         (null | string | number | boolean) |
         (Buffer) |
-        (Error | Boom.Boom) |
+        (Error | Boom) |
         (stream.Stream) |
         (object | object[]) |
         symbol |
